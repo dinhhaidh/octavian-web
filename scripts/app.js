@@ -15,3 +15,18 @@ document.addEventListener("DOMContentLoaded", function () {
 //   el: document.querySelector("[data-scroll-container]"),
 //   smooth: true,
 // });
+
+/*=============== SCROLL REVEAL ANIMATION ===============*/
+const sr = ScrollReveal({
+  origin: 'top',
+  distance: '80px',
+  duration: 2500,
+  delay: 300,
+  // reset: true
+})
+sr.reveal(`.about-content,.hero-video`) //hiệu ứng dưới lên trên
+sr.reveal(`.`, {delay: 500}) //hiệu ứng trên xuống
+sr.reveal(`.work-item,.partner-item,.feature-item`, {delay: 500, interval: 100}) //hiệu ứng trên xuống dần dần
+sr.reveal(`.hero-caption,.experience-content`,{origin: 'right'})
+sr.reveal(`.hero-heading,.experience-number`,{origin: 'left'})
+sr.reveal(`.about-image,.review-item, .contact-main,.footer-main,.footer-rocket,.footer-container`,{origin: 'bottom'})
